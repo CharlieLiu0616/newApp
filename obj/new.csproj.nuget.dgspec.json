@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\jl6\\Desktop\\new\\new.csproj": {}
+    "C:\\Users\\jl6\\Desktop\\new\\new.csproj": {}
   },
   "projects": {
-    "c:\\Users\\jl6\\Desktop\\new\\new.csproj": {
+    "C:\\Users\\jl6\\Desktop\\new\\new.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\jl6\\Desktop\\new\\new.csproj",
+        "projectUniqueName": "C:\\Users\\jl6\\Desktop\\new\\new.csproj",
         "projectName": "new",
-        "projectPath": "c:\\Users\\jl6\\Desktop\\new\\new.csproj",
+        "projectPath": "C:\\Users\\jl6\\Desktop\\new\\new.csproj",
         "packagesPath": "C:\\Users\\jl6\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\jl6\\Desktop\\new\\obj\\",
+        "outputPath": "C:\\Users\\jl6\\Desktop\\new\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
