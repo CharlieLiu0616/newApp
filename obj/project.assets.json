@@ -1,11 +1,60 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {}
+    "net7.0": {
+      "Tobii.Research.x64/1.11.0.1334": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Tobii.Research.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Tobii.Research.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/netstandard2.0/Tobii.Research.x64.targets": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/tobii_firmware_upgrade.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/tobii_pro.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          }
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Tobii.Research.x64/1.11.0.1334": {
+      "sha512": "srdCcRgX/9bzktXN1mmhNXxioOfbA7vmGc9irWcYXxU10Y9zHJtdLAN48mExkKPTLbsq+rwXAcybGCfTbTu2Rw==",
+      "type": "package",
+      "path": "tobii.research.x64/1.11.0.1334",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.md",
+        "README.md",
+        "build/netstandard2.0/Tobii.Research.x64.targets",
+        "lib/netstandard2.0/Tobii.Research.dll",
+        "lib/netstandard2.0/Tobii.Research.xml",
+        "runtimes/win-x64/native/tobii_firmware_upgrade.dll",
+        "runtimes/win-x64/native/tobii_pro.dll",
+        "sdk.png",
+        "tobii.research.x64.1.11.0.1334.nupkg.sha512",
+        "tobii.research.x64.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net7.0": []
+    "net7.0": [
+      "Tobii.Research.x64 >= 1.11.0.1334"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\jl6\\.nuget\\packages\\": {},
@@ -50,6 +99,12 @@
     "frameworks": {
       "net7.0": {
         "targetAlias": "net7.0",
+        "dependencies": {
+          "Tobii.Research.x64": {
+            "target": "Package",
+            "version": "[1.11.0.1334, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

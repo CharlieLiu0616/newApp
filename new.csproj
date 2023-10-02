@@ -8,4 +8,14 @@
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Tobii.Research.x64" Version="1.11.0.1334" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NuGet">
+      <HintPath>..\..\Downloads\nuget.exe</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

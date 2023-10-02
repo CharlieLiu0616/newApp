@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "jruq3J827VLbtekeO0OQAu28zHrSO/xsneLLinFpTxUTS1HpkeNEl4/6ywzUSSSs/knTw8Oq4C14VHtRM1Ppmg==",
+  "dgSpecHash": "94ATlSM521jEszKLSRv5GeSlWQ48pIyWYjdevYsyvuVCc1Su6HHKr1eeQUfa1EVd0tyeKZswqho2DSU/4p0HWw==",
   "success": true,
   "projectFilePath": "C:\\Users\\jl6\\Desktop\\new\\new.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\jl6\\.nuget\\packages\\tobii.research.x64\\1.11.0.1334\\tobii.research.x64.1.11.0.1334.nupkg.sha512"
+  ],
   "logs": []
 }
