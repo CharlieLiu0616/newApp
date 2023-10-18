@@ -28,11 +28,13 @@ public class CalibrationDataToFile {
             // Retrieve the calibration data from the eye tracker.
             CalibrationData calibrationData = eyeTracker.RetrieveCalibrationData();
             // Save the calibration data to the file;
+            Console.WriteLine("Writing calibration data to file..." + path);
             dataContractSerializer.WriteObject(fileStream, calibrationData);
         }
         // Reopen the file and read the calibration data back.
-        using (System.IO.FileStream fileStream = System.IO.File.OpenRead(path))
+        /* using (System.IO.FileStream fileStream = System.IO.File.OpenRead(path))
         {
+
             var dataContractSerializer = new System.Runtime.Serialization.DataContractSerializer(typeof(CalibrationData));
             // Read the calibration data from file.
             CalibrationData calibrationData = dataContractSerializer.ReadObject(fileStream) as CalibrationData;
@@ -42,7 +44,7 @@ public class CalibrationDataToFile {
                 // Apply the calibration data to the eye tracker.
                 eyeTracker.ApplyCalibrationData(calibrationData);
             }
-        }
+        } */
 
     }
 }

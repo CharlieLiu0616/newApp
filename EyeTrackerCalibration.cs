@@ -1,6 +1,7 @@
 
 
 using Tobii.Research;
+using System.Text;
 
 public static class EyeTrackerCalibration {
 
@@ -25,7 +26,7 @@ public static class EyeTrackerCalibration {
 			// Show an image on screen where you want to calibrate.
 			Console.WriteLine("Show point on screen at ({0}, {1})", point.X, point.Y);
 			// Wait a little for user to focus.
-			System.Threading.Thread.Sleep(700);
+			System.Threading.Thread.Sleep(1000);
 			// Collect data.
 			CalibrationStatus status = calibration.CollectData(point);
 			if (status != CalibrationStatus.Success)
@@ -40,16 +41,18 @@ public static class EyeTrackerCalibration {
 		Console.WriteLine("Compute and apply returned {0} and collected at {1} points.",
 			calibrationResult.Status, calibrationResult.CalibrationPoints.Count);
 		// Analyze the data and maybe remove points that weren't good.
-		calibration.DiscardData(new NormalizedPoint2D(0.1f, 0.1f));
+		//calibration.DiscardData(new NormalizedPoint2D(0.1f, 0.1f));
 		// Redo collection at the discarded point.
-		Console.WriteLine("Show point on screen at ({0}, {1})", 0.1f, 0.1f);
-		calibration.CollectData(new NormalizedPoint2D(0.1f, 0.1f));
+		//Console.WriteLine("Show point on screen at ({0}, {1})", 0.1f, 0.1f);
+		//calibration.CollectData(new NormalizedPoint2D(0.1f, 0.1f));
 		// Compute and apply again.
 		calibrationResult = calibration.ComputeAndApply();
-		Console.WriteLine("Second compute and apply returned {0} and collected at {1} points.",
-			calibrationResult.Status, calibrationResult.CalibrationPoints.Count);
+		//Console.WriteLine("Second compute and apply returned {0} and collected at {1} points.",
+		//Status, calibrationResult.CalibrationPoints.Count);
 		// See that you're happy with the result.
 		// The calibration is done. Leave calibration mode.
+		CalibrationData data = eyeTracker.RetrieveCalibrationData();
+		//Console.WriteLine(Encoding.Default.GetString(data.Data));
 		calibration.LeaveCalibrationMode();
 	}
 

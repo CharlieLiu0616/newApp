@@ -6,9 +6,8 @@ namespace newApp
     public static class GetEyeTracker
     {
 
-        public static IEyeTracker Get(string address)
+        public static IEyeTracker Get()
         {
-            Console.WriteLine("\nGetting eye tracker from address string: {0}...", address);
             EyeTrackerCollection eyeTrackers = EyeTrackingOperations.FindAllEyeTrackers();
             foreach (IEyeTracker eyeTracker in eyeTrackers)
             {
