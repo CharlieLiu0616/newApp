@@ -15,7 +15,7 @@ public class CalibrationDataToFile {
         this.path = "calibrationData.xml";
     }
 
-    public void Calibrate()
+    public void Write()
     {
         if (System.IO.File.Exists(path))
         {

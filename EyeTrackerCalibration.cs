@@ -4,7 +4,7 @@ using Tobii.Research;
 
 public static class EyeTrackerCalibration {
 
-	private static void Calibrate(IEyeTracker eyeTracker)
+	public static void Calibrate(IEyeTracker eyeTracker)
 	{
 		// Create a calibration object.
 		var calibration = new ScreenBasedCalibration(eyeTracker);
