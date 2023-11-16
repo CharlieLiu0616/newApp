@@ -3,7 +3,8 @@
 using Tobii.Research;
 using System.Text;
 
-public static class EyeTrackerCalibration {
+public static class EyeTrackerCalibration 
+{
 
 	public static void Calibrate(IEyeTracker eyeTracker)
 	{
@@ -26,7 +27,7 @@ public static class EyeTrackerCalibration {
 			// Show an image on screen where you want to calibrate.
 			Console.WriteLine("Show point on screen at ({0}, {1})", point.X, point.Y);
 			// Wait a little for user to focus.
-			System.Threading.Thread.Sleep(1000);
+			System.Threading.Thread.Sleep(2000);
 			// Collect data.
 			CalibrationStatus status = calibration.CollectData(point);
 			if (status != CalibrationStatus.Success)

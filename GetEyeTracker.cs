@@ -13,7 +13,11 @@ namespace newApp
             {
                 Console.WriteLine("{0}, {1}, {2}, {3}, {4}, {5}", eyeTracker.Address, eyeTracker.DeviceName, eyeTracker.Model, eyeTracker.SerialNumber, eyeTracker.FirmwareVersion, eyeTracker.RuntimeVersion);
             }
-            return eyeTrackers.FirstOrDefault();
+            if (eyeTrackers.Count == 0)
+            {
+                throw new NullReferenceException("Eye tracker not found");
+            }
+            return eyeTrackers[0];
         }
 
     }

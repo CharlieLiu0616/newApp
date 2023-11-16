@@ -1,6 +1,7 @@
 using Tobii.Research;
 
-public class CalibrationDataToFile {
+public class CalibrationDataToFile 
+{
     private IEyeTracker eyeTracker;
     private String path;
 
@@ -46,5 +47,10 @@ public class CalibrationDataToFile {
             }
         } */
 
+    }
+
+    public static byte[] Read(String path)
+    {
+        return File.ReadAllBytes(path);
     }
 }
